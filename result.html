@@ -1,0 +1,86 @@
+<html>
+  <head>
+     <title> SVPCET RESULTS </title>
+     <style>
+       .ccc {
+         text-align: center;
+       }
+       .button {
+         margin: auto;
+       }
+       h3 {
+         background-color: #3399FF;
+         color: white;
+         position: absolute;
+       }
+       .heading {
+         height: 40px;
+         background-color: #3399FF;
+       }
+     </style>
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+     <center>
+       <div class="heading">
+        <h3 id="heading"> SRI VENKATESA PERUMALA COLLEGE OF ENGINEERING AND TECHNOLOGY AUTONOMOUS RESULTS-</h3>
+       </div>
+     </center>
+    <br>
+    <br>
+    <table style="width: 100%">
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <b><p class="ppp">B.TECH III SEM R(20) REGULAR AND SUPPLEMENTARY RESULTS 2023</p></
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="container">
+                        <form name="Results" action="result.html" onsubmit="return checkValue()">
+                            <input id="value" type="text" name="rollno" placeholder="EX: 21G01A0501" oninput="inputLength(this)" />
+                            <input type="submit" id="search" value="Search"></input>
+                    </form>
+                </div>
+            </td>
+            <td>
+                <img src="../img/home.png" alt="Image description" height="40px" width="45px">
+            </td>
+        </tr>
+    </tbody>
+</table>
+    <div class="ccc">
+     <script>
+  	var params = new URLSearchParams(window.location.search);
+		var rollNo = params.get('rollno');
+		var imageFile = rollNo + '.jpg';
+		var imgTag = '<img src="../img/' + imageFile + '" width="98%">';
+		var resHtml = '<html><head><title>Image Output</title></head><body>';
+		resHtml += imgTag;
+		 resHtml += '</body></html>';
+		document.write(resHtml);
+	</script>
+     <div class="button">
+       <button onclick="window.print();">Print</button>
+     </div>
+    </div>
+    <script>
+      function printContent(el){
+      	var restorepage = document.body.innerHTML;
+      	var printcontent = document.getElementById(el).innerHTML;
+      	document.body.innerHTML = printcontent;
+      	window.print();
+      	document.body.innerHTML = restorepage;
+      }
+      function inputLength(input) {
+        if (input.value.length > 10) {
+          alert("\nInvalid!\n\nEnter a valid Number");
+        }
+        else {
+          return true;
+        }
+      }
+</script>
+  </body>
+</html>
