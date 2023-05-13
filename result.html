@@ -45,7 +45,7 @@
                 </div>
             </td>
             <td>
-                <img src="/img/home.png" alt="Image description" height="40px" width="45px">
+                <img src="./img/home.png" alt="Image description" height="40px" width="45px">
             </td>
         </tr>
     </tbody>
@@ -55,7 +55,7 @@
   	var params = new URLSearchParams(window.location.search);
 		var rollNo = params.get('rollno');
 		var imageFile = rollNo + '.jpg';
-		var imgTag = '<img src="/img/' + imageFile + '" width="98%">';
+		var imgTag = '<img src="./img/' + imageFile + '" width="98%">';
 		var resHtml = '<html><head><title>Image Output</title></head><body>';
 		resHtml += imgTag;
 		 resHtml += '</body></html>';
