@@ -83,6 +83,10 @@
           return true;
         }
       }
+      var input = document.getElementById("value");
+      input.addEventListener("input", function(event) {
+      input.value = input.value.toUpperCase();
+    });
 </script>
   </body>
 </html>
